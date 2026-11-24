@@ -1,0 +1,10 @@
+# local, machine-specific output — never commit
+# data\ holds raw scans (full paths, installed software) and run reports
+# logs\ holds per-day cleanup logs
+data/
+logs/
+
+# scratch / downloaded tools
+tools/
+*.log
+*.tmp
