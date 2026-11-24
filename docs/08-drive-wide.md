@@ -7,7 +7,7 @@ Windows junk locations.
 ## 1. Scan the whole drive (read-only)
 
 ```powershell
-cd C:\Users\disha\AppData\appdata-cleanup-kit\scripts
+cd %USERPROFILE%\AppData\appdata-cleanup-kit\scripts
 powershell -NoProfile -ExecutionPolicy Bypass -File checks\scan-drive.ps1
 ```
 
@@ -94,7 +94,7 @@ run the same command there. Do not use `takeown`/`icacls` on system folders.
 | `System Volume Information` | restore points | System Protection settings |
 | `Windows\System32`, `servicing`, `assembly` | OS itself | — |
 | `Program Files*`, `ProgramData` (except listed caches) | installed software | uninstall / Disk Cleanup |
-| `C:\Users\disha\Downloads`, Documents, Desktop | user files | user decides |
+| `%USERPROFILE%\Downloads`, Documents, Desktop | user files | user decides |
 
 ## 4. Recommended order for a drive-wide cleanup
 

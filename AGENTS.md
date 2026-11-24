@@ -1,6 +1,6 @@
 # AGENTS.md — instructions for any AI agent using this kit
 
-This folder is the single source of truth for cleaning `C:\Users\disha\AppData`.
+This folder is the single source of truth for cleaning `%USERPROFILE%\AppData`.
 Read this file before running any script or deleting anything.
 
 ## Non-negotiable rules
@@ -15,7 +15,7 @@ Read this file before running any script or deleting anything.
    Never hand-type `Remove-Item` against AppData.
 5. **Never delete** anything in `docs/04-never-touch.md` — in particular
    `...\Local\Programs`, browser `User Data` profiles, `%APPDATA%\kingsoft`, `%APPDATA%\Code\User`,
-   `%APPDATA%\Adobe\<Product>\<version>`, `%APPDATA%\Python`, and `C:\Users\disha\Downloads`.
+   `%APPDATA%\Adobe\<Product>\<version>`, `%APPDATA%\Python`, and `%USERPROFILE%\Downloads`.
 6. **No elevation, no registry edits, no `takeown`/`icacls`, no `del /f /s /q` one-liners.**
    A locked file means "close the app", not "force it".
 7. **Report after every apply**: group, MB freed, free space before/after, any `FAILED` path.
@@ -60,7 +60,7 @@ If a change pushes a script past ~150 lines, split it or question the design.
 ## Commands
 
 ```powershell
-cd C:\Users\disha\AppData\appdata-cleanup-kit\scripts
+cd "$env:USERPROFILE\AppData\appdata-cleanup-kit\scripts"
 
 # read-only
 powershell -NoProfile -ExecutionPolicy Bypass -File checks\show-space.ps1
@@ -121,7 +121,7 @@ Removing a group = delete its two files (group file + wrapper) and its doc row.
 
 - Sizes are **MB** in JSON/CSV, human-formatted (MB/GB) on the console.
 - `EstMB` is the 2026-11-23 estimate; `data\scan-live.json` is the live truth. Trust live data.
-- `Tier = optional` entries under `C:\Users\disha\.gradle`, `.bun`, `.cache` are outside AppData
+- `Tier = optional` entries under `%USERPROFILE%\.gradle`, `.bun`, `.cache` are outside AppData
   but belong to the same original scan.
 - `skip (missing)` and `0.0 MB` lines are normal, not errors.
 - Exit code 0 with a `FAILED` line means a locked path: retry after closing the app.

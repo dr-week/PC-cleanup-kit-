@@ -30,7 +30,7 @@ Hard boundaries. No script in this kit targets anything below, and no agent shou
 
 | Path | Why |
 |---|---|
-| `C:\Users\disha\Downloads` (3.4 GB) | The user's files. |
+| `%USERPROFILE%\Downloads` (3.4 GB) | The user's files. |
 | `Desktop`, `Documents`, `Pictures`, `Videos`, `OneDrive` | The user's files. |
 | Any `*backup*`, `*autosave*`, `*.prproj`, `*.docx`, `*.xlsx`, `*.psd` | Work in progress. |
 

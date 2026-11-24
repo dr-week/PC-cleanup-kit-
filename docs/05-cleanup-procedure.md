@@ -2,7 +2,7 @@
 
 Order matters: measure → preview → close apps → apply → verify.
 
-All commands run from `C:\Users\disha\AppData\appdata-cleanup-kit\scripts`
+All commands run from `%USERPROFILE%\AppData\appdata-cleanup-kit\scripts`
 (Windows PowerShell 5.1; Git Bash users should still call `powershell -File …`).
 
 ## Step 0 — baseline (read-only)

@@ -18,5 +18,5 @@
     Paths   = @('%USERPROFILE%\.bun\install\cache')
     Why     = 'Bun package cache. Regenerated on the next "bun install".'
     Recover = 'Automatic on next "bun install".'
-    Caveat  = 'Lives outside AppData (C:\Users\disha\.bun).'
+    Caveat  = 'Lives outside AppData (%USERPROFILE%\.bun).'
 }

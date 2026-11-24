@@ -18,5 +18,5 @@
     Paths   = @('%USERPROFILE%\.cache\codex-runtimes')
     Why     = 'Downloaded agent runtime bundles, re-fetched on demand.'
     Recover = 'Automatic on next agent run (needs internet).'
-    Caveat  = 'Lives outside AppData (C:\Users\disha\.cache).'
+    Caveat  = 'Lives outside AppData (%USERPROFILE%\.cache).'
 }

@@ -16,12 +16,12 @@ Raw data: `data\scan-drive-2026-11-24.json` / `.csv`.
 | **12.63 GB** | `C:\Program Files` | installed programs — uninstall, don't delete |
 | **12.11 GB** | `C:\Windows\System32` (incl. DriverStore 7.11 GB) | OS + drivers — Disk Cleanup "Driver packages" if needed |
 | **8.51 GB** | `C:\ProgramData\NVIDIA Corporation` | **8.36 GB is downloaded driver installers** — group `nvidia-update-cache` |
-| **6.46 GB** | `C:\Users\disha\Pictures` | user files |
+| **6.46 GB** | `%USERPROFILE%\Pictures` | user files |
 | **6.25 GB** | `C:\hiberfil.sys` | hibernation/fast startup — `powercfg /h off` if unused |
 | **6.24 GB** | `C:\eSupport` | OEM driver backup — group `esupport-drivers` (review) |
-| **6.22 GB** | `C:\Users\disha\.lmstudio` | local LLM models (re-downloadable, large) |
-| **5.82 GB** | `C:\Users\disha\Videos` | user files |
-| **29.67 GB** | `C:\Users\disha\AppData` | handled by the AppData kit (`docs/02`) |
+| **6.22 GB** | `%USERPROFILE%\.lmstudio` | local LLM models (re-downloadable, large) |
+| **5.82 GB** | `%USERPROFILE%\Videos` | user files |
+| **29.67 GB** | `%USERPROFILE%\AppData` | handled by the AppData kit (`docs/02`) |
 
 ## Largest single files
 
@@ -35,7 +35,7 @@ Raw data: `data\scan-drive-2026-11-24.json` / `.csv`.
 | 2.51 GB | `C:\$Recycle.Bin\...\$RLPPE7W.zip` | **deleted file waiting in the bin** |
 | 2.35 GB | `...\Android\Sdk\system-images\...\system.img` | emulator system image |
 | 877.8 MB | `...\Python310\site-packages\torch\lib\torch_cuda.dll` | installed package |
-| 840.4 MB | `C:\Users\disha\Videos\freework\PROJice.rar` | user archive |
+| 840.4 MB | `%USERPROFILE%\Videos\freework\PROJice.rar` | user archive |
 | 805 MB / 736 MB | `NVIDIA app\UpdateFramework\...\*-whql-g.exe` | **driver installers — group `nvidia-update-cache`** |
 
 ## Actionable now (no decisions needed)
@@ -78,7 +78,7 @@ Still needs admin: `HKLM\SOFTWARE\WOW6432Node\...\Run` → `StudioApp.exe`
 ## How to reproduce
 
 ```powershell
-cd C:\Users\disha\AppData\appdata-cleanup-kit\scripts
+cd %USERPROFILE%\AppData\appdata-cleanup-kit\scripts
 powershell -NoProfile -ExecutionPolicy Bypass -File checks\scan-drive.ps1 -Depth 4
 powershell -NoProfile -ExecutionPolicy Bypass -File checks\find-unwanted.ps1 -MinMB 100
 ```

@@ -1,7 +1,7 @@
 # 01 — Scan summary (2026-11-23)
 
-Scope: `C:\Users\disha\AppData` (plus the developer caches that sit next to it in
-`C:\Users\disha`, which were part of the original scan).
+Scope: `%USERPROFILE%\AppData` (plus the developer caches that sit next to it in
+`%USERPROFILE%`, which were part of the original scan).
 Method: recursive size measurement, three levels deep, then a targeted re-measure of every
 cleanup candidate. All numbers are **MB** unless stated.
 
@@ -55,7 +55,7 @@ cleanup candidate. All numbers are **MB** unless stated.
 | `npm` | 543 | npm config/logs (not the big cache) |
 | `@codebufffreebuff-desktop-updater` (under Local) | 540 | updater leftovers — **deletable** |
 
-## Developer caches outside AppData (same project, `C:\Users\disha`)
+## Developer caches outside AppData (same project, `%USERPROFILE%`)
 
 | Path | MB | Tier |
 |---|---|---|
